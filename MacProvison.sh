@@ -12,7 +12,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
 
-#Remove All Default Icons from the Dock 
+#Remove All Default Icons from the Dock
 sudo defaults delete com.apple.dock persistent-apps
 sudo defaults delete com.apple.dock persistent-others
 sudo killall Dock
@@ -22,9 +22,13 @@ sudo defaults write -g QLPanelAnimationDuration -float 0
 sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 sudo defaults write com.apple.Dock autohide-delay -float 0
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
+#Make all animations faster that are used by Mission Control.
+defaults write com.apple.dock expose-animation-duration -float 0.1
+# Disable animations when you open an application from the Dock.
+defaults write com.apple.dock launchanim -bool false
 
 #change computers hostname and etc  [[[BROKEN]]]   [[DISABLED FOR NOW!!]]
-#user = sudo stat -f%Su /dev/console > 
+#user = sudo stat -f%Su /dev/console >
 #sudo scutil --set ComputerName "$user-VMBP"
 
 
@@ -53,4 +57,3 @@ if [ '`/usr/bin/uname -p`'="i386" -o '`/usr/bin/uname -p`'="x86_64" ]; then
 else
 	/bin/echo "`date`: ERROR: This script is for Intel Macs only." >> ${logfile}
 fi
-
