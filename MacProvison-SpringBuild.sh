@@ -1,5 +1,5 @@
 #!/bin/bash
-echo  Macbook New Hire Provisoning - Dev Build 2018
+echo  Macbook New Hire Provisoning - Mac OS High Sierra Spring Build
 
 
 #Enable Firewall
@@ -17,6 +17,14 @@ sudo defaults delete com.apple.dock persistent-apps
 sudo defaults delete com.apple.dock persistent-others
 sudo killall Dock
 
+#Disable animations when opening and closing windows.
+sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+# Disable animations when opening a Quick Look window
+sudo defaults write -g QLPanelAnimationDuration -float 0
+#Disable animation when opening the Info window in Finde
+sudo defaults write com.apple.finder DisableAllAnimations -bool true
+#Make all animations faster that are used by Mission Control
+sudo defaults write com.apple.dock expose-animation-duration -float 0.1
 
 #update & install Google Chrome
 dmgfile="googlechrome.dmg"
