@@ -12,11 +12,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
 
-#Remove All Default Icons from the Dock
-sudo defaults delete com.apple.dock persistent-apps
-sudo defaults delete com.apple.dock persistent-others
-sudo killall Dock
-
 #Disable animations when opening and closing windows.
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # Disable animations when opening a Quick Look window
