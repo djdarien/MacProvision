@@ -1,6 +1,15 @@
 #!/bin/bash
 echo  Macbook New Hire Provisoning - Mac OS High Sierra Spring Build
 
+#Downloads Google Chat and File stream
+sleep 5s
+cd Desktop/
+mkdir GoogleApps
+wget https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
+wget https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
+sleep 10s
+#INstalls Google File Stream
+hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target "/Volumes/Macintosh HD"; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/
 
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
