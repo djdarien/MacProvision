@@ -57,3 +57,9 @@ if [ '`/usr/bin/uname -p`'="i386" -o '`/usr/bin/uname -p`'="x86_64" ]; then
 else
 	/bin/echo "`date`: ERROR: This script is for Intel Macs only." >> ${logfile}
 fi
+
+sleep 2s
+echo  Provisioning has completed!
+echo GOODBYE!
+exit
+
