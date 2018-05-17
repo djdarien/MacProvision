@@ -5,9 +5,10 @@ echo  Macbook New Hire Provisoning - Mac OS High Sierra Spring Build
 sleep 5s
 cd Desktop/
 sudo mkdir GoogleApps
-sudo wget https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
-sleep 60s
-sudo wget https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
+sleep 2s
+sudo /usr/bin/curl -s -o https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
+sleep 40s
+sudo /usr/bin/curl -s -o https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
 sleep 10s
 #INstalls Google File Stream
 hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target "/Volumes/Macintosh HD"; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/
