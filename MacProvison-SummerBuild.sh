@@ -6,9 +6,9 @@ sleep 5s
 cd Desktop/
 sudo mkdir GoogleApps
 sleep 2s
-sudo /usr/bin/curl -s -o https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
+sudo curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
 sleep 40s
-sudo /usr/bin/curl -s -o https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
+sudo curl -O https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
 sleep 10s
 #INstalls Google File Stream
 hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target "/Volumes/Macintosh HD"; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/
@@ -25,7 +25,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 
 #Disable animations when opening and closing windows.
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-# Disable animations when opening a Quick Look window
+# Disable animations when opening a Quick Look windowß
 sudo defaults write -g QLPanelAnimationDuration -float 0
 #Disable animation when opening the Info window in Finde
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
