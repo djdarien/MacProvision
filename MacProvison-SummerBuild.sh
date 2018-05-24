@@ -7,12 +7,12 @@ cd Desktop/
 sudo mkdir GoogleApps
 sleep 2s
 sudo curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
-sleep 40s
+sleep 45s
 sudo curl -O https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
 sleep 10s
 #INstalls Google File Stream
 hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target "/Volumes/Macintosh HD"; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/
-
+sleep 5s
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #allow Signed Apps on Firewall
@@ -60,6 +60,8 @@ fi
 
 sleep 2s
 echo  Provisioning has completed!
+say Provisioning has completed!
 echo GOODBYE!
+say GOODBYE!
 exit
 
