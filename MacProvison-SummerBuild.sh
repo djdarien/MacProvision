@@ -11,7 +11,7 @@ hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ G
 sleep 5s
 
 #Downloads Google chat
-sudo cd ~/Desktop/ && { curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg ; cd -; }
+/Applications/Safari.app/Contents/MacOS/Safari & sleep 1 && osascript -e 'tell application "Safari" to open location "https://dl.google.com/chat/latest/InstallHangoutsChat.dmg"'
 sleep 5s
 
 #Enable Firewall
@@ -23,7 +23,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 #Disable Guest account
 sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
-
+echo Disabled Guest account!
 #Disable animations when opening and closing windows.
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # Disable animations when opening a Quick Look windowß
