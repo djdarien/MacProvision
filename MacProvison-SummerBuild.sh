@@ -1,18 +1,19 @@
 #!/bin/bash
 echo  Macbook New Hire Provisoning - Mac OS High Sierra Spring Build
 
-#Downloads Google Chat and File stream
+#Downloads Google File stream
 sleep 5s
-cd Desktop/
-sudo mkdir GoogleApps
-sleep 2s
-sudo curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
-sleep 45s
+sudo cd Desktop/
 sudo curl -O https://dl.google.com/drive-file-stream/GoogleDriveFileStream.dmg
 sleep 10s
 #INstalls Google File Stream
 hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target "/Volumes/Macintosh HD"; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/
 sleep 5s
+
+#Downloads Google chat
+sudo cd ~/Desktop/ && { curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg ; cd -; }
+sleep 5s
+
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #allow Signed Apps on Firewall
@@ -64,4 +65,3 @@ say Provisioning has completed!
 echo GOODBYE!
 say GOODBYE!
 exit
-
