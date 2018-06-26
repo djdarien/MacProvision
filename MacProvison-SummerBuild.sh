@@ -11,8 +11,9 @@ hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ G
 sleep 5s
 
 #Downloads Google chat
-/Applications/Safari.app/Contents/MacOS/Safari & sleep 1 && osascript -e 'tell application "Safari" to open location "https://dl.google.com/chat/latest/InstallHangoutsChat.dmg"'
-sleep 5s
+sudo cd Desktop/
+sudo curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
+sleep 10s
 
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
