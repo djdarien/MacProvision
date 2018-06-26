@@ -1,5 +1,5 @@
 #!/bin/bash
-echo  Macbook New Hire Provisoning - Mac OS High Sierra Spring Build
+echo  Macbook New Hire Provisoning - Mac OS High Sierra Summer Build
 
 #Downloads Google File stream
 sleep 5s
