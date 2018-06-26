@@ -15,6 +15,9 @@ sudo cd Desktop/
 sudo curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
 sleep 10s
 
+#install user admin
+sudo installer -pkg create_uadmin-1.2.pkg -target "/Volumes/Macintosh HD"
+
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #allow Signed Apps on Firewall
