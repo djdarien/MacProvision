@@ -11,7 +11,7 @@ hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ G
 sleep 5s
 
 #Downloads Google chat
-sudo cd Desktop/
+sudo cd ~
 sudo curl -O https://dl.google.com/chat/latest/InstallHangoutsChat.dmg
 sleep 10s
 
@@ -64,6 +64,10 @@ else
 fi
 
 sleep 2s
+echo File Vault now being enabled!
+sudo fdesetup enable
+pause
+sleep 1s
 echo  Provisioning has completed!
 say Provisioning has completed!
 echo GOODBYE!
