@@ -1,5 +1,6 @@
 #!/bin/bash
-echo  Macbook New Hire Provisoning - Mac OS High Sierra Halloween Build
+# 2018 Winter Build - Darien Entwistle
+echo  Macbook New Hire Provisoning - Mac OS High Sierra Xmas Build
 say Welcome!
 say Macbook Provisoning has started... standby..
 #Downloads Google File stream
@@ -132,9 +133,6 @@ if [ "$slackOn" == "" ] ; then
 	exit 0
 else
 	su - "${consoleuser}" -c 'open -a /Applications/Slack.app'
-fi
-
-    exit 0
 fi
 sleep 2s
 
