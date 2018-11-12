@@ -14,7 +14,10 @@ sleep 5s
 
 #install user admin
 sudo installer -pkg create_uadmin-1.2.pkg -target "/Volumes/Macintosh HD"
-
+sleep 1s
+#Intstalls the Upstairs printer for Voalte HQ office
+sudo cp Upstairs.ppd /etc/cups/ppd/
+sleep 1s
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #allow Signed Apps on Firewall
