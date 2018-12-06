@@ -15,9 +15,6 @@ sleep 5s
 #install user admin
 sudo installer -pkg create_uadmin-1.2.pkg -target "/Volumes/Macintosh HD"
 sleep 1s
-#Intstalls the Upstairs printer for Voalte HQ office
-sudo cp Upstairs.ppd /etc/cups/ppd/
-sleep 1s
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #allow Signed Apps on Firewall
@@ -32,10 +29,9 @@ echo Disabled Guest account!
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # Disable animations when opening a Quick Look windowß
 sudo defaults write -g QLPanelAnimationDuration -float 0
-#Disable animation when opening the Info window in Finde
+#Disable animation when opening the Info window in Finder
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
-#Make all animations faster that are used by Mission Control
-sudo defaults write com.apple.dock expose-animation-duration -float 0.1
+
 
 #update & install Google Chrome
 dmgfile="googlechrome.dmg"
@@ -63,11 +59,6 @@ else
 	/bin/echo "`date`: ERROR: This script is for Intel Macs only." >> ${logfile}
 fi
 
-sleep 2s
-echo File Vault now being enabled!
-sudo fdesetup enable
-pause
-sleep 1s
 
 #Downloads & Installs Slack  - GITHUB source https://github.com/bwiessner/install_latest_slack_osx_app/blob/master/install_latest_slack_osx_app.sh
 #gets current logged in user
