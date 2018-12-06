@@ -21,18 +21,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 
 
-#Disable Guest account
-sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
-echo Disabled Guest account!
-#Disable animations when opening and closing windows.
-sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-# Disable animations when opening a Quick Look windowß
-sudo defaults write -g QLPanelAnimationDuration -float 0
-#Disable animation when opening the Info window in Finder
-sudo defaults write com.apple.finder DisableAllAnimations -bool true
-
-
 #update & install Google Chrome
 dmgfile="googlechrome.dmg"
 volname="Google Chrome"
