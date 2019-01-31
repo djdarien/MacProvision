@@ -1,6 +1,6 @@
 #!/bin/bash
-# 2018 Winter Build - Darien Entwistle
-echo  Macbook New Hire Provisoning - Mac OS High Sierra Xmas Build
+# 2019 New Year 3.0 Build - Darien Entwistle
+echo  Macbook New Hire Provisoning -  2019 New Year 3.0 Build
 say Welcome!
 say Macbook Provisoning has started... standby..
 #Downloads Google File stream
@@ -11,17 +11,13 @@ sleep 10s
 #INstalls Google File Stream
 hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target "/Volumes/Macintosh HD"; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/
 sleep 5s
-
-#install user admin
-sudo installer -pkg create_uadmin-1.2.pkg -target "/Volumes/Macintosh HD"
-sleep 1s
 #Enable Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 #allow Signed Apps on Firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 
 sleep 4s
-echo MSOFFICE2016 install time
+echo Now installing MSOFFICE2016
 DOWNLOAD_URLS=( \
   # Office 365 BusinessPro Suite Installer
   "https://go.microsoft.com/fwlink/?linkid=2009112" \
