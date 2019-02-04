@@ -166,6 +166,9 @@ else
 fi
 sleep 2s
 
+#Lets set Google Chrome as default
+sudo open -a "Google Chrome" --args --make-default-browser
+sleep 1s
 
 echo  Provisioning has completed!
 say Provisioning has completed!
