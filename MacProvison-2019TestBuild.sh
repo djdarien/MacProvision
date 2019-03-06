@@ -1,6 +1,7 @@
 #!/bin/bash
 # 2019 New Year 3.0 Build - Darien Entwistle
 echo  Macbook New Hire Provisoning -  2019 New Year 3.0 Build
+
 say Welcome!
 say Macbook Provisoning has started... standby..
 #Downloads Google File stream
@@ -28,6 +29,7 @@ MAU_PATH="/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app
 SECOND_MAU_PATH="/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app/Contents/MacOS/Microsoft AU Daemon.app"
 INSTALLER_TARGET="LocalSystem"
 
+echo downloading office now....
 syslog -s -l error "MSOFFICE2016 - Starting Download/Install sequence."
 
 for downloadUrl in "${DOWNLOAD_URLS[@]}"; do
@@ -68,7 +70,7 @@ if [ -e "$MAU_PATH" ]; then
 fi
 
 syslog -s -l error "MSOFFICE2016 - SCRIPT COMPLETE"
-
+echo Office installed !!
 #update & install Google Chrome
 dmgfile="googlechrome.dmg"
 volname="Google Chrome"
