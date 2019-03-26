@@ -18,6 +18,8 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 
 sleep 4s
+
+
 echo Now installing MSOFFICE2016
 DOWNLOAD_URLS=( \
   # Office 365 BusinessPro Suite Installer
@@ -71,7 +73,8 @@ fi
 
 syslog -s -l error "MSOFFICE2016 - SCRIPT COMPLETE"
 echo Office installed !!
-#update & install Google Chrome
+
+#update & or  install Google Chrome
 dmgfile="googlechrome.dmg"
 volname="Google Chrome"
 logfile="/Library/Logs/GoogleChromeInstallScript.log"
@@ -171,7 +174,9 @@ sleep 2s
 #Lets set Google Chrome as default
 sudo open -a "Google Chrome" --args --make-default-browser
 sleep 1s
-
+# Force empty trash
+sudo rm -rf ~/.Trash/*
+sleep 1s
 echo  Provisioning has completed!
 say Provisioning has completed!
 echo GOODBYE!
