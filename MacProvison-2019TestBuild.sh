@@ -22,8 +22,8 @@ sleep 4s
 
 echo Now installing MSOFFICE2016
 DOWNLOAD_URLS=( \
-  # Office 365 BusinessPro Suite Installer
-  "https://go.microsoft.com/fwlink/?linkid=2009112" \
+  # Office 365/2019 Suite Installer
+  "https://go.microsoft.com/fwlink/?linkid=525133" \
 
   )
 
